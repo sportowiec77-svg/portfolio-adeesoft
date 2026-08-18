@@ -43,19 +43,17 @@ document.addEventListener('keydown', (event) => {
   }
 });
 
-// Zapewnia start wyciszonego wideo także w przeglądarkach,
-// które bardziej restrykcyjnie traktują autoplay.
-const showcaseVideo = document.querySelector('.showcase-video');
-if (showcaseVideo) {
-  showcaseVideo.muted = true;
-  showcaseVideo.playsInline = true;
-  showcaseVideo.play().catch(() => {});
-}
+// Zapewnia start wszystkich wyciszonych filmów także w przeglądarkach,
+ // które bardziej restrykcyjnie traktują autoplay.
+document.querySelectorAll('.showcase-video').forEach((video) => {
+  video.muted = true;
+  video.playsInline = true;
+  video.play().catch(() => {});
+});
 
-// Akordeon „Dlaczego warto” — otwarty może być tylko jeden box naraz.
-const accordion = document.querySelector('[data-accordion]');
-
-if (accordion) {
+// Każda sekcja „Dlaczego warto” ma własny niezależny akordeon.
+// W obrębie jednego akordeonu otwarty może być tylko jeden box naraz.
+document.querySelectorAll('[data-accordion]').forEach((accordion) => {
   const accordionItems = [...accordion.querySelectorAll('.accordion-item')];
 
   accordionItems.forEach((item) => {
@@ -75,7 +73,7 @@ if (accordion) {
       }
     });
   });
-}
+});
 
 // Delikatne wejście całej sekcji po przewinięciu do niej.
 const revealItems = document.querySelectorAll('.reveal-on-scroll');
