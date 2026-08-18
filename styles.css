@@ -715,3 +715,251 @@ button {
     font-size: 1rem;
   }
 }
+
+
+/* =========================================================
+   REALIZACJA 02 — KOSMETOLOGIA / jasny wariant
+   ========================================================= */
+.portfolio-cosmetology {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding: 96px 0 76px;
+  color: #2d2926;
+  background:
+    radial-gradient(circle at 18% 28%, rgba(201, 157, 84, 0.08), transparent 30%),
+    radial-gradient(circle at 82% 72%, rgba(201, 157, 84, 0.06), transparent 28%),
+    #f6f0e8;
+}
+
+.light-transition {
+  position: absolute;
+  z-index: 0;
+  top: -88px;
+  left: 0;
+  width: 100%;
+  height: 150px;
+  pointer-events: none;
+  background: linear-gradient(
+    180deg,
+    #0f172a 0%,
+    rgba(15, 23, 42, 0.92) 18%,
+    rgba(49, 48, 47, 0.52) 48%,
+    rgba(209, 194, 175, 0.72) 74%,
+    #f6f0e8 100%
+  );
+  clip-path: ellipse(85% 62% at 50% 100%);
+}
+
+.portfolio-cosmetology::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  pointer-events: none;
+  background:
+    linear-gradient(to right, rgba(128, 103, 76, 0.035) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(128, 103, 76, 0.035) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+.cosmo-circle {
+  position: absolute;
+  z-index: -1;
+  border-radius: 50%;
+  border: 1px solid rgba(183, 137, 65, 0.18);
+  pointer-events: none;
+}
+
+.cosmo-circle-one {
+  width: 360px;
+  height: 360px;
+  top: 130px;
+  left: -160px;
+}
+
+.cosmo-circle-two {
+  width: 155px;
+  height: 155px;
+  top: 410px;
+  right: 6%;
+}
+
+.cosmo-circle-three {
+  width: 520px;
+  height: 520px;
+  bottom: 150px;
+  right: -310px;
+}
+
+.cosmo-circle-four {
+  width: 88px;
+  height: 88px;
+  bottom: 430px;
+  left: 10%;
+}
+
+.section-inner-light {
+  position: relative;
+  z-index: 2;
+}
+
+.section-header-light {
+  margin-bottom: 34px;
+}
+
+.section-header-light h2 {
+  color: #272320;
+}
+
+.section-header-light .section-lead {
+  width: min(720px, 92%);
+  margin: 18px auto 0;
+  color: #6d645d;
+  font-size: clamp(1rem, 1.5vw, 1.1rem);
+  line-height: 1.75;
+}
+
+.eyebrow-light {
+  color: #b78942;
+}
+
+.laptop-wrapper-light {
+  filter: drop-shadow(0 24px 30px rgba(86, 66, 44, 0.22));
+}
+
+.section-divider-light {
+  border-top-color: rgba(158, 119, 63, 0.23);
+}
+
+.thumb-card-light {
+  color: #2d2926;
+  background: rgba(255, 252, 247, 0.72);
+  border-color: rgba(177, 134, 70, 0.22);
+  box-shadow: 0 18px 34px rgba(91, 69, 46, 0.09);
+  backdrop-filter: blur(4px);
+}
+
+.thumb-card-light:hover,
+.thumb-card-light:focus-visible {
+  border-color: rgba(177, 134, 70, 0.55);
+  box-shadow: 0 22px 40px rgba(91, 69, 46, 0.14);
+}
+
+.thumb-light {
+  border-color: rgba(177, 134, 70, 0.18);
+  background: #eee3d6;
+}
+
+.thumb-label-light {
+  color: #302a25;
+}
+
+.why-section-light {
+  color: #2d2926;
+}
+
+.why-heading-light h3 {
+  color: #292521;
+}
+
+.why-heading-light > p:last-child {
+  color: #736a62;
+}
+
+.why-accordion-light .accordion-item-light {
+  background: rgba(255, 252, 247, 0.78);
+  border-color: rgba(177, 134, 70, 0.22);
+  box-shadow: 0 14px 28px rgba(91, 69, 46, 0.065);
+}
+
+.why-accordion-light .accordion-item-light:hover {
+  border-color: rgba(177, 134, 70, 0.42);
+}
+
+.accordion-trigger-light {
+  color: #302a25;
+}
+
+.why-accordion-light .accordion-number {
+  color: #b78942;
+}
+
+.why-accordion-light .accordion-content-inner {
+  color: #6c625a;
+}
+
+.why-accordion-light .accordion-icon {
+  border-color: rgba(183, 137, 66, 0.55);
+}
+
+.why-accordion-light .accordion-icon::before,
+.why-accordion-light .accordion-icon::after {
+  background: #a77936;
+}
+
+/* Lightbox otwierany również z jasnej sekcji pozostaje ciemny,
+   dzięki czemu zdjęcie ma mocniejszy kontrast i wspólną obsługę. */
+
+@media (max-width: 700px) {
+  .portfolio-cosmetology {
+    padding: 72px 0 58px;
+  }
+
+  .light-transition {
+    top: -64px;
+    height: 112px;
+  }
+
+  .cosmo-circle-one {
+    width: 240px;
+    height: 240px;
+    left: -150px;
+  }
+
+  .cosmo-circle-two {
+    width: 110px;
+    height: 110px;
+    right: -35px;
+    top: 520px;
+  }
+
+  .cosmo-circle-three {
+    width: 340px;
+    height: 340px;
+    right: -240px;
+  }
+
+  .section-header-light .section-lead {
+    width: 94%;
+    font-size: 0.98rem;
+    line-height: 1.65;
+  }
+}
+
+
+/* ===== FIX: kontrast tekstu w jasnym akordeonie Kosmetologia ===== */
+.why-section-light .accordion-item,
+.why-section-light .accordion-trigger,
+.why-section-light .accordion-title {
+  color: #2d2926;
+}
+
+.why-section-light .accordion-content,
+.why-section-light .accordion-content-inner,
+.why-section-light .accordion-content-inner p {
+  color: #655c54;
+}
+
+.why-section-light .accordion-content-inner strong {
+  color: #2d2926;
+  font-weight: 700;
+}
+
+.why-section-light .accordion-number {
+  color: #b78942;
+}
+
+.why-section-light .accordion-item.is-open .accordion-title {
+  color: #201c19;
+}
