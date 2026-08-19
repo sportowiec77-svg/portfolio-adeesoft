@@ -1424,3 +1424,267 @@ button {
     left: -30px;
   }
 }
+
+
+/* =========================================================
+   FOOTER — ADEESOFT
+   ========================================================= */
+.site-footer {
+  position: relative;
+  overflow: hidden;
+  color: #f5f5f5;
+  background:
+    radial-gradient(circle at 92% 100%, rgba(242, 92, 22, .20), transparent 24%),
+    linear-gradient(135deg, #0b0b0c 0%, #111214 55%, #08090a 100%);
+  border-top: 1px solid rgba(255,255,255,.10);
+}
+
+.site-footer::before,
+.site-footer::after {
+  content: "";
+  position: absolute;
+  width: 420px;
+  height: 420px;
+  border: 1px solid rgba(255,255,255,.055);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.site-footer::before { left: -250px; bottom: -300px; }
+.site-footer::after { right: -210px; top: -320px; }
+
+.footer-inner {
+  position: relative;
+  z-index: 2;
+  width: min(1180px, calc(100% - 48px));
+  margin: 0 auto;
+  padding: 78px 0 64px;
+  display: grid;
+  grid-template-columns: 1.15fr 1fr 1.05fr;
+  gap: 70px;
+  align-items: start;
+}
+
+.footer-brand {
+  max-width: 360px;
+}
+
+.footer-logo {
+  display: block;
+  width: 118px;
+  height: 118px;
+  object-fit: contain;
+  margin: 0 0 18px;
+}
+
+.footer-tagline {
+  margin: 0 0 24px;
+  color: #fff;
+  font-size: .86rem;
+  font-weight: 800;
+  letter-spacing: .22em;
+}
+
+.footer-description {
+  margin: 0;
+  max-width: 330px;
+  color: rgba(255,255,255,.68);
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.footer-services,
+.footer-contact {
+  position: relative;
+}
+
+.footer-contact {
+  padding-left: 52px;
+  border-left: 1px solid rgba(242,92,22,.32);
+}
+
+.footer-services h2,
+.footer-contact h2 {
+  position: relative;
+  margin: 0 0 34px;
+  padding-bottom: 14px;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: .15em;
+}
+
+.footer-services h2::after,
+.footer-contact h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 46px;
+  height: 2px;
+  background: #f25c16;
+}
+
+.footer-services ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 20px;
+}
+
+.footer-services li {
+  position: relative;
+  padding-left: 28px;
+  color: rgba(255,255,255,.82);
+  line-height: 1.45;
+}
+
+.footer-services li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: .48em;
+  width: 8px;
+  height: 8px;
+  border: 2px solid #f25c16;
+  border-radius: 50%;
+}
+
+.footer-contact address {
+  font-style: normal;
+}
+
+.footer-contact p {
+  margin: 0 0 19px;
+  color: rgba(255,255,255,.78);
+  line-height: 1.55;
+}
+
+.footer-contact strong { color: #fff; }
+.footer-contact span { color: #f25c16; }
+
+.footer-contact a {
+  color: rgba(255,255,255,.88);
+  text-decoration: none;
+  transition: color .2s ease;
+}
+
+.footer-contact a:hover,
+.footer-contact a:focus-visible {
+  color: #f25c16;
+}
+
+.footer-bottom {
+  position: relative;
+  z-index: 2;
+  border-top: 1px solid rgba(255,255,255,.12);
+}
+
+.footer-bottom-inner {
+  width: min(1180px, calc(100% - 48px));
+  margin: 0 auto;
+  padding: 22px 0;
+  color: rgba(255,255,255,.68);
+  font-size: .9rem;
+}
+
+.footer-bottom-inner strong {
+  color: #f25c16;
+  font-weight: 600;
+}
+
+@media (max-width: 860px) {
+  .footer-inner {
+    grid-template-columns: 1fr 1fr;
+    gap: 46px;
+  }
+
+  .footer-brand {
+    grid-column: 1 / -1;
+    max-width: 520px;
+  }
+
+  .footer-contact {
+    padding-left: 32px;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-inner {
+    width: min(100% - 36px, 1180px);
+    padding: 58px 0 46px;
+    grid-template-columns: 1fr;
+    gap: 42px;
+  }
+
+  .footer-brand {
+    grid-column: auto;
+  }
+
+  .footer-logo {
+    width: 96px;
+    height: 96px;
+  }
+
+  .footer-contact {
+    padding-left: 0;
+    padding-top: 38px;
+    border-left: 0;
+    border-top: 1px solid rgba(242,92,22,.26);
+  }
+
+  .footer-bottom-inner {
+    width: min(100% - 36px, 1180px);
+    padding: 20px 0;
+    line-height: 1.55;
+  }
+}
+
+
+/* ===== FOOTER SVG ICONS ===== */
+.footer-services li {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding-left: 0;
+}
+
+.footer-services li::before {
+  content: none;
+}
+
+.footer-services li > img,
+.footer-contact-row > img {
+  flex: 0 0 auto;
+  width: 28px;
+  height: 28px;
+  color: #f25c16;
+}
+
+.footer-contact-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.footer-contact-row > img {
+  margin-top: 2px;
+}
+
+.footer-contact-row > span {
+  display: block;
+}
+
+.footer-accent {
+  color: #f25c16;
+}
+
+@media (max-width: 600px) {
+  .footer-services li > img,
+  .footer-contact-row > img {
+    width: 25px;
+    height: 25px;
+  }
+}
