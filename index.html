@@ -3,20 +3,21 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Realizacje stron WWW | Portfolio</title>
-    <meta
-      name="description"
-      content="Portfolio realizacji stron WWW — projekty dla kancelarii prawnej i branży kosmetologicznej."
-    />
+    <title>Realizacje stron internetowych | Portfolio stron WWW – AdeeSoft</title>
+    <meta name="description" content="Portfolio realizacji stron internetowych AdeeSoft. Zobacz nowoczesne, szybkie i responsywne strony WWW tworzone dla firm, kancelarii i branży beauty." />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <main class="page-shell">
       <section class="portfolio-realizations" aria-labelledby="realizacje-title">
         <div class="section-inner">
-          <header class="section-header">
+          <header class="section-header portfolio-intro">
             <p class="eyebrow">Portfolio</p>
-            <h2 id="realizacje-title">Realizacje</h2>
+            <h1 id="realizacje-title">Realizacje stron internetowych – portfolio AdeeSoft</h1>
+            <p class="portfolio-lead">
+              Przegląd wybranych projektów stron WWW tworzonych z naciskiem na szybkość działania,
+              responsywność, lokalne SEO i czytelną prezentację usług.
+            </p>
           </header>
 
           <div class="showcase-block" aria-label="Prezentacja realizacji">
@@ -43,7 +44,67 @@
             </div>
           </div>
 
-          <hr class="section-divider" />
+          <div class="portfolio-benefits" aria-label="Najważniejsze zalety projektowanych stron">
+            <div class="portfolio-benefit">
+              <span class="benefit-icon" aria-hidden="true">
+                <svg viewBox="0 0 32 32" role="img">
+                  <circle cx="16" cy="16" r="12"></circle>
+                  <path d="M16 8v3M24 16h-3M16 24v-3M8 16h3"></path>
+                  <path d="M16 16l6-5"></path>
+                  <circle cx="16" cy="16" r="2"></circle>
+                </svg>
+              </span>
+              <span class="benefit-copy">
+                <strong>Szybkość</strong>
+                <small>Optymalizacja i szybkie działanie</small>
+              </span>
+            </div>
+
+            <div class="portfolio-benefit">
+              <span class="benefit-icon" aria-hidden="true">
+                <svg viewBox="0 0 32 32" role="img">
+                  <rect x="5" y="7" width="15" height="12" rx="1.5"></rect>
+                  <path d="M10 23h5M12.5 19v4"></path>
+                  <rect x="21" y="12" width="6" height="13" rx="1.2"></rect>
+                </svg>
+              </span>
+              <span class="benefit-copy">
+                <strong>Responsywność</strong>
+                <small>Dopasowanie do każdego urządzenia</small>
+              </span>
+            </div>
+
+            <div class="portfolio-benefit">
+              <span class="benefit-icon" aria-hidden="true">
+                <svg viewBox="0 0 32 32" role="img">
+                  <circle cx="16" cy="16" r="11"></circle>
+                  <circle cx="16" cy="16" r="6"></circle>
+                  <circle cx="16" cy="16" r="2"></circle>
+                  <path d="M20 12l7-7M23 5h4v4"></path>
+                </svg>
+              </span>
+              <span class="benefit-copy">
+                <strong>Skuteczność</strong>
+                <small>Projekt z myślą o celach biznesowych</small>
+              </span>
+            </div>
+
+            <div class="portfolio-benefit">
+              <span class="benefit-icon" aria-hidden="true">
+                <svg viewBox="0 0 32 32" role="img">
+                  <circle cx="14" cy="14" r="8"></circle>
+                  <path d="M20 20l7 7"></path>
+                  <path d="M10 14h8M14 10v8"></path>
+                </svg>
+              </span>
+              <span class="benefit-copy">
+                <strong>SEO</strong>
+                <small>Lepsza widoczność w Google</small>
+              </span>
+            </div>
+          </div>
+
+          <hr class="section-divider portfolio-divider-after-benefits" />
 
           <div class="miniature-section">
             <div class="thumb-grid" aria-label="Miniatury realizacji">
@@ -87,6 +148,33 @@
               </button>
             </div>
           </div>
+
+          <article class="project-seo-card reveal-on-scroll" aria-labelledby="project-01-title">
+            <div class="project-seo-icon" aria-hidden="true">
+              <svg viewBox="0 0 64 64">
+                <path d="M32 9v42M19 18h26M14 50h36"></path>
+                <path d="M19 18l-9 17h18L19 18ZM45 18l-9 17h18L45 18Z"></path>
+                <path d="M10 35c1.5 5 5 8 9 8s7.5-3 9-8M36 35c1.5 5 5 8 9 8s7.5-3 9-8"></path>
+              </svg>
+            </div>
+
+            <div class="project-seo-main">
+              <p class="project-seo-kicker">Projekt 01</p>
+              <h2 id="project-01-title">Strona internetowa dla kancelarii adwokackiej</h2>
+              <p>
+                Nowoczesny projekt strony WWW przygotowany dla kancelarii prawnej. Projekt został wykonany
+                z naciskiem na szybkość działania, responsywność, lokalne SEO oraz czytelną prezentację usług
+                i specjalizacji.
+              </p>
+            </div>
+
+            <ul class="project-seo-features" aria-label="Najważniejsze cechy realizacji kancelarii">
+              <li>Szybka i lekka strona</li>
+              <li>Responsywna na wszystkich urządzeniach</li>
+              <li>Lokalne SEO i widoczność w Google</li>
+              <li>Jasna prezentacja usług i specjalizacji</li>
+            </ul>
+          </article>
 
           <section class="why-section" aria-labelledby="why-title">
             <div class="why-accordion-wrap reveal-on-scroll">
@@ -192,12 +280,12 @@
         <div class="cosmo-circle cosmo-circle-four" aria-hidden="true"></div>
 
         <div class="section-inner section-inner-light">
-          <header class="section-header section-header-light">
+          <header class="section-header section-header-light cosmetology-intro">
             <p class="eyebrow eyebrow-light">Projekt 02</p>
-            <h2 id="kosmetologia-title">Kosmetologia</h2>
+            <h2 id="kosmetologia-title">Strona internetowa dla kosmetologa</h2>
             <p class="section-lead">
-              Jasna, elegancka realizacja dla branży beauty — zaprojektowana tak, aby budować zaufanie,
-              eksponować ofertę i prowadzić klientkę od pierwszego wrażenia do umówienia wizyty.
+              Elegancka strona internetowa dla branży beauty, zaprojektowana z naciskiem na estetyczną
+              prezentację zabiegów, szybkość działania, responsywność oraz wygodny kontakt z klientem.
             </p>
           </header>
 
@@ -222,6 +310,66 @@
                 alt="Laptop z prezentacją strony gabinetu kosmetologicznego"
                 class="laptop-image"
               />
+            </div>
+          </div>
+
+          <div class="portfolio-benefits portfolio-benefits-light" aria-label="Najważniejsze zalety strony dla kosmetologa">
+            <div class="portfolio-benefit">
+              <span class="benefit-icon benefit-icon-light" aria-hidden="true">
+                <svg viewBox="0 0 32 32" role="img">
+                  <circle cx="16" cy="16" r="12"></circle>
+                  <path d="M16 8v3M24 16h-3M16 24v-3M8 16h3"></path>
+                  <path d="M16 16l6-5"></path>
+                  <circle cx="16" cy="16" r="2"></circle>
+                </svg>
+              </span>
+              <span class="benefit-copy benefit-copy-light">
+                <strong>Szybkość</strong>
+                <small>Optymalizacja i szybkie działanie</small>
+              </span>
+            </div>
+
+            <div class="portfolio-benefit">
+              <span class="benefit-icon benefit-icon-light" aria-hidden="true">
+                <svg viewBox="0 0 32 32" role="img">
+                  <rect x="5" y="7" width="15" height="12" rx="1.5"></rect>
+                  <path d="M10 23h5M12.5 19v4"></path>
+                  <rect x="21" y="12" width="6" height="13" rx="1.2"></rect>
+                </svg>
+              </span>
+              <span class="benefit-copy benefit-copy-light">
+                <strong>Responsywność</strong>
+                <small>Dopasowanie do każdego urządzenia</small>
+              </span>
+            </div>
+
+            <div class="portfolio-benefit">
+              <span class="benefit-icon benefit-icon-light" aria-hidden="true">
+                <svg viewBox="0 0 32 32" role="img">
+                  <circle cx="16" cy="16" r="11"></circle>
+                  <circle cx="16" cy="16" r="6"></circle>
+                  <circle cx="16" cy="16" r="2"></circle>
+                  <path d="M20 12l7-7M23 5h4v4"></path>
+                </svg>
+              </span>
+              <span class="benefit-copy benefit-copy-light">
+                <strong>Skuteczność</strong>
+                <small>Projekt z myślą o celach biznesowych</small>
+              </span>
+            </div>
+
+            <div class="portfolio-benefit">
+              <span class="benefit-icon benefit-icon-light" aria-hidden="true">
+                <svg viewBox="0 0 32 32" role="img">
+                  <circle cx="14" cy="14" r="8"></circle>
+                  <path d="M20 20l7 7"></path>
+                  <path d="M10 14h8M14 10v8"></path>
+                </svg>
+              </span>
+              <span class="benefit-copy benefit-copy-light">
+                <strong>SEO</strong>
+                <small>Lepsza widoczność w Google</small>
+              </span>
             </div>
           </div>
 
@@ -258,17 +406,48 @@
               <button
                 class="thumb-card thumb-card-light"
                 type="button"
-                data-title="Sekcja O mnie"
+                data-title="O mnie / Gabinet"
                 data-image="./kosmetologia-o-mnie-1200x675.webp"
-                aria-label="Otwórz podgląd sekcji O mnie"
+                aria-label="Otwórz podgląd sekcji O mnie i Gabinet"
               >
                 <span class="thumb thumb-light">
-                  <img src="./kosmetologia-o-mnie-1200x675.webp" alt="Sekcja O mnie na stronie kosmetologii" loading="lazy" />
+                  <img src="./kosmetologia-o-mnie-1200x675.webp" alt="Sekcja O mnie i Gabinet na stronie kosmetologii" loading="lazy" />
                 </span>
-                <span class="thumb-label thumb-label-light">Sekcja O mnie</span>
+                <span class="thumb-label thumb-label-light">O mnie / Gabinet</span>
               </button>
             </div>
           </div>
+
+          <article class="project-seo-card project-seo-card-light reveal-on-scroll" aria-labelledby="project-02-title">
+            <div class="project-seo-icon project-seo-icon-light" aria-hidden="true">
+              <svg viewBox="0 0 64 64">
+                <path d="M21 48c0-8 4-14 11-18 7 4 11 10 11 18"></path>
+                <circle cx="32" cy="20" r="8"></circle>
+                <path d="M16 50h32"></path>
+                <path d="M48 14c0 5-3 9-8 11"></path>
+                <path d="M51 10c-5 0-9 3-11 8"></path>
+              </svg>
+            </div>
+
+            <div class="project-seo-main project-seo-main-light">
+              <p class="project-seo-kicker project-seo-kicker-light">Projekt 02</p>
+              <h2 id="project-02-title">Strona internetowa dla kosmetologa</h2>
+              <p>
+                Nowoczesny projekt strony WWW przygotowany dla gabinetu kosmetologicznego. Jasna,
+                elegancka stylistyka została połączona z czytelną prezentacją zabiegów, responsywnym
+                układem i lekką warstwą front-end. Projekt prowadzi użytkownika od poznania oferty
+                i specjalisty do podjęcia decyzji o umówieniu wizyty.
+              </p>
+            </div>
+
+            <ul class="project-seo-features project-seo-features-light"
+                aria-label="Najważniejsze cechy realizacji dla kosmetologa">
+              <li>Lekka i szybka strona</li>
+              <li>Responsywność na wszystkich urządzeniach</li>
+              <li>Czytelna prezentacja zabiegów</li>
+              <li>Estetyka premium dla branży beauty</li>
+            </ul>
+          </article>
 
           <section class="why-section why-section-light" aria-labelledby="why-cosmo-title">
             <div class="why-accordion-wrap reveal-on-scroll">

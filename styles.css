@@ -118,8 +118,7 @@ button {
 
 /*
  * laptop3.webp: 1672 x 941 px.
- * Przezroczysty obszar ekranu: ok. x=260..1411, y=59..726.
- * Wartości procentowe skalują się razem z grafiką na desktopie i mobile.
+ * Przezorczysty obszar ekranu: ok. x=260..1411, y=59..726.
  */
 .laptop-screen-overlay {
   position: absolute;
@@ -140,25 +139,6 @@ button {
   object-fit: contain;
   object-position: center center;
   background: #000;
-}
-
-.section-divider {
-  width: min(90%, 1024px);
-  border: 0;
-  border-top: 1px solid rgba(212, 175, 55, 0.2);
-  margin: 42px auto 34px;
-}
-
-.miniature-section {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding-bottom: 8px;
-}
-
-.thumb-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 24px;
 }
 
 .thumb-card {
@@ -184,20 +164,13 @@ button {
 .thumb {
   position: relative;
   display: block;
-  width: 100%;
-  aspect-ratio: 16 / 9;
   border-radius: 12px;
   overflow: hidden;
   border: 1px solid rgba(212, 175, 55, 0.14);
   background: linear-gradient(135deg, rgba(15, 23, 42, 0.95), rgba(30, 41, 59, 0.82));
 }
 
- .thumb img {
-  width: 100%;
-  height: 100%;
-  display: block;
-  object-fit: cover;
-  object-position: center;
+.thumb img {
   transition: transform 0.35s ease, filter 0.35s ease;
 }
 
@@ -205,16 +178,6 @@ button {
 .thumb-card:focus-visible .thumb img {
   transform: scale(1.025);
   filter: brightness(1.04);
-}
-
-.thumb-label {
-  display: block;
-  margin-top: 14px;
-  color: var(--text-primary);
-  font-size: 1rem;
-  font-weight: 600;
-  letter-spacing: 0.01em;
-  text-align: center;
 }
 
 .lightbox {
@@ -303,37 +266,11 @@ button {
   background: linear-gradient(135deg, #111827, #1e293b);
 }
 
-.lightbox-visual::before,
-.lightbox-visual::after {
-  content: "";
-  position: absolute;
-}
-
 .lightbox-visual.hero {
   background:
     linear-gradient(180deg, rgba(15, 23, 42, 0.08), rgba(15, 23, 42, 0.3)),
     radial-gradient(circle at 80% 20%, rgba(212, 175, 55, 0.42), transparent 24%),
     linear-gradient(135deg, #0f172a 0%, #1e293b 45%, #111827 100%);
-}
-
-.lightbox-visual.hero::before {
-  left: 9%;
-  right: 9%;
-  top: 15%;
-  height: 18%;
-  border-radius: 12px;
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(212, 175, 55, 0.24);
-}
-
-.lightbox-visual.hero::after {
-  left: 9%;
-  right: 34%;
-  bottom: 14%;
-  height: 26%;
-  border-radius: 12px;
-  background: linear-gradient(180deg, rgba(212, 175, 55, 0.24), rgba(212, 175, 55, 0.08));
-  border: 1px solid rgba(212, 175, 55, 0.2);
 }
 
 .lightbox-visual.offer {
@@ -343,51 +280,11 @@ button {
     #111827;
 }
 
-.lightbox-visual.offer::before {
-  left: 10%;
-  right: 10%;
-  top: 20%;
-  height: 15%;
-  border-radius: 10px;
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(212, 175, 55, 0.2);
-}
-
-.lightbox-visual.offer::after {
-  left: 10%;
-  right: 10%;
-  bottom: 17%;
-  height: 36%;
-  border-radius: 12px;
-  background: linear-gradient(90deg, rgba(212, 175, 55, 0.26) 0%, rgba(212, 175, 55, 0.03) 35%, rgba(148, 163, 184, 0.08) 35%, rgba(148, 163, 184, 0.08) 100%);
-  border: 1px solid rgba(212, 175, 55, 0.18);
-}
-
 .lightbox-visual.contact {
   background:
     linear-gradient(180deg, rgba(15, 23, 42, 0.1), rgba(15, 23, 42, 0.26)),
     radial-gradient(circle at 70% 30%, rgba(212, 175, 55, 0.24), transparent 40%),
     linear-gradient(135deg, #111827 0%, #1f2937 100%);
-}
-
-.lightbox-visual.contact::before {
-  left: 18%;
-  right: 18%;
-  top: 25%;
-  height: 12%;
-  border-radius: 10px;
-  background: rgba(212, 175, 55, 0.18);
-  border: 1px solid rgba(212, 175, 55, 0.22);
-}
-
-.lightbox-visual.contact::after {
-  left: 18%;
-  right: 18%;
-  bottom: 18%;
-  height: 28%;
-  border-radius: 12px;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(212, 175, 55, 0.18);
 }
 
 #lightbox-title {
@@ -639,7 +536,6 @@ button {
   }
 }
 
-
 /* Podgląd rzeczywistych grafik realizacji */
 .lightbox-visual::before,
 .lightbox-visual::after {
@@ -654,68 +550,6 @@ button {
   object-position: center;
   background: #0b1220;
 }
-
-
-/* ===== MOBILE: kafle realizacji jeden pod drugim ===== */
-@media (max-width: 700px) {
-  .miniature-section {
-    width: 100%;
-    max-width: none;
-    padding: 0 0 8px;
-  }
-
-  .thumb-grid {
-    width: 88%;
-    margin: 0 auto;
-    grid-template-columns: 1fr;
-    gap: 18px;
-  }
-
-  .thumb-card {
-    width: 100%;
-    padding: 12px 12px 16px;
-    border-radius: 18px;
-  }
-
-  .thumb {
-    width: 100%;
-    aspect-ratio: 16 / 9;
-    border-radius: 12px;
-  }
-
-  .thumb img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-  }
-
-  .thumb-label {
-    margin-top: 12px;
-    font-size: 1.08rem;
-    line-height: 1.25;
-  }
-
-  .section-divider {
-    margin: 34px auto 28px;
-  }
-}
-
-@media (max-width: 420px) {
-  .thumb-grid {
-    width: 92%;
-    gap: 16px;
-  }
-
-  .thumb-card {
-    padding: 10px 10px 14px;
-  }
-
-  .thumb-label {
-    font-size: 1rem;
-  }
-}
-
 
 /* =========================================================
    REALIZACJA 02 — KOSMETOLOGIA / jasny wariant
@@ -898,9 +732,6 @@ button {
   background: #a77936;
 }
 
-/* Lightbox otwierany również z jasnej sekcji pozostaje ciemny,
-   dzięki czemu zdjęcie ma mocniejszy kontrast i wspólną obsługę. */
-
 @media (max-width: 700px) {
   .portfolio-cosmetology {
     padding: 72px 0 58px;
@@ -937,7 +768,6 @@ button {
   }
 }
 
-
 /* ===== FIX: kontrast tekstu w jasnym akordeonie Kosmetologia ===== */
 .why-section-light .accordion-item,
 .why-section-light .accordion-trigger,
@@ -963,7 +793,6 @@ button {
 .why-section-light .accordion-item.is-open .accordion-title {
   color: #201c19;
 }
-
 
 /* =========================================================
    REALIZACJA 03 — FORMA FITNESS&GYM / ciemny wariant
@@ -1011,7 +840,7 @@ button {
   background-size: 46px 46px;
 }
 
-/* Dekoracyjne hantle budowane wyłącznie CSS-em */
+/* Dekoracyjne hantle */
 .fitness-dumbbell {
   position: absolute;
   z-index: -1;
@@ -1160,23 +989,11 @@ button {
     opacity: 0.7;
   }
 
-  .dumbbell-one {
-    left: -72px;
-  }
-
-  .dumbbell-two {
-    right: -76px;
-  }
-
-  .dumbbell-three {
-    left: -88px;
-  }
-
-  .dumbbell-four {
-    right: -78px;
-  }
+  .dumbbell-one { left: -72px; }
+  .dumbbell-two { right: -76px; }
+  .dumbbell-three { left: -88px; }
+  .dumbbell-four { right: -78px; }
 }
-
 
 /* =========================================================
    REALIZACJA 04 — PIZZERIA VIVA / jasny gastronomiczny wariant
@@ -1224,7 +1041,7 @@ button {
   background-size: 48px 48px;
 }
 
-/* Dekoracyjne "pizze" — okręgi podzielone na 6 równych części */
+/* Dekoracyjne okręgi pizzy */
 .pizza-orbit {
   position: absolute;
   z-index: -1;
@@ -1425,7 +1242,6 @@ button {
   }
 }
 
-
 /* =========================================================
    FOOTER — ADEESOFT
    ========================================================= */
@@ -1536,20 +1352,42 @@ button {
 
 .footer-services li {
   position: relative;
-  padding-left: 28px;
+  padding-left: 0;
   color: rgba(255,255,255,.82);
   line-height: 1.45;
+  display: flex;
+  align-items: center;
+  gap: 16px;
 }
 
 .footer-services li::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: .48em;
-  width: 8px;
-  height: 8px;
-  border: 2px solid #f25c16;
-  border-radius: 50%;
+  content: none;
+}
+
+.footer-services li > img,
+.footer-contact-row > img {
+  flex: 0 0 auto;
+  width: 28px;
+  height: 28px;
+  color: #f25c16;
+}
+
+.footer-contact-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.footer-contact-row > img {
+  margin-top: 2px;
+}
+
+.footer-contact-row > span {
+  display: block;
+}
+
+.footer-accent {
+  color: #f25c16;
 }
 
 .footer-contact address {
@@ -1640,51 +1478,533 @@ button {
     padding: 20px 0;
     line-height: 1.55;
   }
-}
 
-
-/* ===== FOOTER SVG ICONS ===== */
-.footer-services li {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  padding-left: 0;
-}
-
-.footer-services li::before {
-  content: none;
-}
-
-.footer-services li > img,
-.footer-contact-row > img {
-  flex: 0 0 auto;
-  width: 28px;
-  height: 28px;
-  color: #f25c16;
-}
-
-.footer-contact-row {
-  display: flex;
-  align-items: flex-start;
-  gap: 16px;
-}
-
-.footer-contact-row > img {
-  margin-top: 2px;
-}
-
-.footer-contact-row > span {
-  display: block;
-}
-
-.footer-accent {
-  color: #f25c16;
-}
-
-@media (max-width: 600px) {
   .footer-services li > img,
   .footer-contact-row > img {
     width: 25px;
     height: 25px;
+  }
+}
+
+/* =========================================================
+   SEKCJA 01 — SEO / układ kompozycji
+   ========================================================= */
+.portfolio-realizations {
+  padding-top: 34px;
+  padding-bottom: 74px;
+}
+
+.portfolio-intro {
+  max-width: 940px;
+  margin: 0 auto 24px;
+}
+
+.portfolio-intro h1 {
+  margin: 0;
+  color: var(--text-primary);
+  font-size: clamp(2rem, 4vw, 3.45rem);
+  line-height: 1.08;
+  letter-spacing: -0.035em;
+  font-weight: 650;
+}
+
+.portfolio-lead {
+  width: min(780px, 92%);
+  margin: 16px auto 0;
+  color: var(--text-muted);
+  font-size: clamp(.98rem, 1.35vw, 1.08rem);
+  line-height: 1.65;
+}
+
+.portfolio-realizations .showcase-block {
+  margin-top: 8px;
+}
+
+/* Pasek korzyści pod laptopem */
+.portfolio-benefits {
+  width: min(96%, 1120px);
+  margin: 16px auto 0;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  align-items: stretch;
+  background: rgba(8, 16, 30, 0.72);
+  border: 1px solid rgba(212, 175, 55, 0.30);
+  border-radius: 14px;
+  box-shadow: 0 18px 38px rgba(2, 6, 23, 0.22);
+  backdrop-filter: blur(5px);
+}
+
+.portfolio-benefit {
+  position: relative;
+  min-width: 0;
+  padding: 15px 18px;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.portfolio-benefit:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 18%;
+  right: 0;
+  width: 1px;
+  height: 64%;
+  background: rgba(212, 175, 55, 0.22);
+}
+
+.benefit-icon {
+  flex: 0 0 38px;
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  color: var(--gold);
+}
+
+.benefit-icon svg {
+  width: 34px;
+  height: 34px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.65;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.benefit-copy {
+  min-width: 0;
+  display: grid;
+  gap: 3px;
+}
+
+.benefit-copy strong {
+  color: #fff;
+  font-size: .95rem;
+  line-height: 1.2;
+}
+
+.benefit-copy small {
+  color: rgba(226, 232, 240, .66);
+  font-size: .74rem;
+  line-height: 1.35;
+}
+
+.portfolio-divider-after-benefits {
+  margin-top: 22px;
+  margin-bottom: 28px;
+}
+
+/* SEO opis realizacji */
+.project-seo-card {
+  width: min(96%, 1120px);
+  margin: 22px auto 0;
+  padding: 24px 28px;
+  display: grid;
+  grid-template-columns: 76px minmax(0, 1.55fr) minmax(260px, .9fr);
+  gap: 28px;
+  align-items: center;
+  background:
+    linear-gradient(135deg, rgba(15, 23, 42, .82), rgba(8, 16, 30, .68));
+  border: 1px solid rgba(212, 175, 55, .32);
+  border-radius: 17px;
+  box-shadow: 0 18px 34px rgba(2, 6, 23, .24);
+}
+
+.project-seo-icon {
+  width: 72px;
+  height: 72px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(212, 175, 55, .46);
+  border-radius: 50%;
+  color: var(--gold);
+  background: rgba(212, 175, 55, .035);
+}
+
+.project-seo-icon svg {
+  width: 48px;
+  height: 48px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.45;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.project-seo-main {
+  min-width: 0;
+}
+
+.project-seo-kicker {
+  margin: 0 0 6px;
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: .2em;
+  font-size: .71rem;
+  font-weight: 800;
+}
+
+.project-seo-main h2 {
+  margin: 0 0 8px;
+  color: #fff;
+  font-size: clamp(1.35rem, 2vw, 1.8rem);
+  line-height: 1.15;
+  letter-spacing: -.025em;
+}
+
+.project-seo-main > p:last-child {
+  margin: 0;
+  color: rgba(226, 232, 240, .74);
+  font-size: .93rem;
+  line-height: 1.55;
+}
+
+.project-seo-features {
+  position: relative;
+  margin: 0;
+  padding: 0 0 0 28px;
+  list-style: none;
+  display: grid;
+  gap: 9px;
+}
+
+.project-seo-features::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 2px;
+  bottom: 2px;
+  width: 1px;
+  background: rgba(212, 175, 55, .26);
+}
+
+.project-seo-features li {
+  position: relative;
+  padding-left: 22px;
+  color: rgba(241, 245, 249, .78);
+  font-size: .82rem;
+  line-height: 1.35;
+}
+
+.project-seo-features li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: -.05em;
+  width: 14px;
+  height: 14px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(212, 175, 55, .7);
+  border-radius: 50%;
+  color: var(--gold);
+  font-size: .58rem;
+  font-weight: 800;
+}
+
+.project-seo-card + .why-section {
+  margin-top: 42px;
+}
+
+@media (max-width: 900px) {
+  .portfolio-benefits {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .portfolio-benefit:nth-child(2)::after {
+    display: none;
+  }
+
+  .portfolio-benefit:nth-child(-n+2) {
+    border-bottom: 1px solid rgba(212, 175, 55, .16);
+  }
+
+  .project-seo-card {
+    grid-template-columns: 68px 1fr;
+  }
+
+  .project-seo-features {
+    grid-column: 1 / -1;
+    margin-left: 96px;
+  }
+}
+
+@media (max-width: 700px) {
+  .portfolio-realizations {
+    padding-top: 30px;
+    padding-bottom: 58px;
+  }
+
+  .portfolio-intro {
+    margin-bottom: 18px;
+  }
+
+  .portfolio-intro h1 {
+    font-size: clamp(1.85rem, 8vw, 2.55rem);
+  }
+
+  .portfolio-lead {
+    width: 96%;
+    margin-top: 13px;
+    font-size: .95rem;
+    line-height: 1.55;
+  }
+
+  .portfolio-benefits {
+    width: 92%;
+    margin-top: 8px;
+  }
+
+  .portfolio-benefit {
+    padding: 13px 11px;
+    gap: 9px;
+  }
+
+  .benefit-icon {
+    flex-basis: 30px;
+    width: 30px;
+    height: 30px;
+  }
+
+  .benefit-icon svg {
+    width: 28px;
+    height: 28px;
+  }
+
+  .benefit-copy strong {
+    font-size: .86rem;
+  }
+
+  .benefit-copy small {
+    font-size: .67rem;
+  }
+
+  .project-seo-card {
+    width: 92%;
+    padding: 22px 18px;
+    grid-template-columns: 54px 1fr;
+    gap: 16px;
+    align-items: start;
+  }
+
+  .project-seo-icon {
+    width: 54px;
+    height: 54px;
+  }
+
+  .project-seo-icon svg {
+    width: 37px;
+    height: 37px;
+  }
+
+  .project-seo-main h2 {
+    font-size: 1.28rem;
+  }
+
+  .project-seo-main > p:last-child {
+    grid-column: 1 / -1;
+    font-size: .9rem;
+  }
+
+  .project-seo-features {
+    grid-column: 1 / -1;
+    margin-left: 0;
+    padding: 18px 0 0;
+    border-top: 1px solid rgba(212, 175, 55, .18);
+  }
+
+  .project-seo-features::before {
+    display: none;
+  }
+}
+
+@media (max-width: 430px) {
+  .portfolio-benefits {
+    width: 94%;
+  }
+
+  .portfolio-benefit {
+    min-height: 72px;
+  }
+
+  .benefit-copy small {
+    display: none;
+  }
+}
+
+/* =========================================================
+   PODGLĄDY REALIZACJI — idealne dopasowanie szerokości
+   Sekcja Hero / Prezentacja Oferty / Formularz Kontaktowy
+   ========================================================= */
+.section-divider {
+  width: min(96%, 1120px);
+  border: 0;
+  border-top: 1px solid rgba(212, 175, 55, 0.2);
+  margin: 34px auto 28px;
+}
+
+.miniature-section {
+  width: min(96%, 1120px);
+  margin: 0 auto;
+  padding: 0 0 8px;
+}
+
+.thumb-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+}
+
+.thumb-card {
+  width: 100%;
+  min-width: 0;
+  margin: 0;
+}
+
+.thumb {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+}
+
+.thumb img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.thumb-label {
+  display: block;
+  width: 100%;
+  margin-top: 14px;
+  color: var(--text-primary);
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  text-align: center;
+}
+
+/* Mobile — jeden kafel pod drugim */
+@media (max-width: 700px) {
+  .miniature-section {
+    width: 92%;
+    padding: 0;
+  }
+
+  .thumb-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .thumb-label {
+    margin-top: 12px;
+    font-size: 1.05rem;
+  }
+}
+
+/* =========================================================
+   SEKCJA 02 — KOSMETOLOGIA / SEO i blok opisu realizacji
+   ========================================================= */
+.cosmetology-intro {
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cosmetology-intro h2 {
+  font-size: clamp(2rem, 3.2vw, 3rem);
+  line-height: 1.12;
+  letter-spacing: -0.035em;
+}
+
+.project-seo-card-light {
+  background:
+    linear-gradient(135deg, rgba(255, 252, 247, 0.90), rgba(244, 235, 224, 0.82));
+  border-color: rgba(177, 134, 70, 0.30);
+  box-shadow: 0 18px 34px rgba(91, 69, 46, 0.09);
+}
+
+.project-seo-icon-light {
+  color: #b78942;
+  border-color: rgba(177, 134, 70, 0.46);
+  background: rgba(183, 137, 66, 0.055);
+}
+
+.project-seo-main-light h2 {
+  color: #2d2926;
+}
+
+.project-seo-main-light > p:last-child {
+  color: #655c54;
+}
+
+.project-seo-kicker-light {
+  color: #b78942;
+}
+
+.project-seo-features-light::before {
+  background: rgba(177, 134, 70, 0.27);
+}
+
+.project-seo-features-light li {
+  color: #5f564e;
+}
+
+.project-seo-features-light li::before {
+  color: #a77936;
+  border-color: rgba(177, 134, 70, 0.72);
+  background: rgba(255, 252, 247, 0.62);
+}
+
+.project-seo-card-light + .why-section-light {
+  margin-top: 42px;
+}
+
+@media (max-width: 700px) {
+  .cosmetology-intro h2 {
+    font-size: clamp(1.8rem, 7.5vw, 2.4rem);
+  }
+
+  .project-seo-card-light {
+    width: 92%;
+  }
+}
+
+
+/* =========================================================
+   SEKCJA 02 — jasny pasek korzyści pod laptopem
+   ========================================================= */
+.portfolio-benefits-light {
+  background: rgba(255, 252, 247, 0.78);
+  border-color: rgba(177, 134, 70, 0.28);
+  box-shadow: 0 18px 36px rgba(91, 69, 46, 0.08);
+  backdrop-filter: blur(5px);
+}
+
+.portfolio-benefits-light .portfolio-benefit:not(:last-child)::after {
+  background: rgba(177, 134, 70, 0.22);
+}
+
+.benefit-icon-light {
+  color: #b78942;
+}
+
+.benefit-copy-light strong {
+  color: #2d2926;
+}
+
+.benefit-copy-light small {
+  color: #70665e;
+}
+
+@media (max-width: 900px) {
+  .portfolio-benefits-light .portfolio-benefit:nth-child(-n+2) {
+    border-bottom-color: rgba(177, 134, 70, 0.18);
   }
 }
