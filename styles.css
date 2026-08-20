@@ -2008,3 +2008,167 @@ button {
     border-bottom-color: rgba(177, 134, 70, 0.18);
   }
 }
+
+
+/* =========================================================
+   SEKCJA 03 — FORMA FITNESS&GYM / SEO
+   ========================================================= */
+.fitness-intro {
+  max-width: 920px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.fitness-intro h2 {
+  font-size: clamp(2rem, 3.2vw, 3rem);
+  line-height: 1.12;
+  letter-spacing: -0.035em;
+}
+
+.portfolio-benefits-fitness {
+  background: rgba(9, 12, 17, 0.76);
+  border-color: rgba(255, 128, 0, 0.30);
+  box-shadow: 0 18px 38px rgba(0, 0, 0, 0.26);
+}
+
+.portfolio-benefits-fitness .portfolio-benefit:not(:last-child)::after {
+  background: rgba(255, 128, 0, 0.22);
+}
+
+.benefit-icon-fitness {
+  color: #ff8000;
+}
+
+.project-seo-card-fitness {
+  background:
+    radial-gradient(circle at 92% 0%, rgba(255, 128, 0, 0.075), transparent 28%),
+    linear-gradient(135deg, rgba(16, 20, 27, 0.88), rgba(7, 10, 14, 0.76));
+  border-color: rgba(255, 128, 0, 0.30);
+  box-shadow: 0 18px 36px rgba(0, 0, 0, 0.27);
+}
+
+.project-seo-icon-fitness {
+  color: #ff8000;
+  border-color: rgba(255, 128, 0, 0.48);
+  background: rgba(255, 128, 0, 0.045);
+}
+
+.project-seo-kicker-fitness {
+  color: #ff8000;
+}
+
+.project-seo-features-fitness::before {
+  background: rgba(255, 128, 0, 0.26);
+}
+
+.project-seo-features-fitness li::before {
+  color: #ff8000;
+  border-color: rgba(255, 128, 0, 0.72);
+}
+
+.project-seo-card-fitness + .fitness-why {
+  margin-top: 42px;
+}
+
+/* =========================================================
+   SEKCJA 04 — PIZZERIA VIVA / SEO
+   ========================================================= */
+.viva-intro {
+  max-width: 920px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.viva-intro h2 {
+  font-size: clamp(2rem, 3.2vw, 3rem);
+  line-height: 1.12;
+  letter-spacing: -0.035em;
+}
+
+.portfolio-benefits-viva {
+  background: rgba(255, 253, 249, 0.80);
+  border-color: rgba(229, 102, 28, 0.25);
+  box-shadow: 0 18px 36px rgba(92, 64, 42, 0.08);
+  backdrop-filter: blur(5px);
+}
+
+.portfolio-benefits-viva .portfolio-benefit:not(:last-child)::after {
+  background: rgba(229, 102, 28, 0.20);
+}
+
+.benefit-icon-viva {
+  color: #e5661c;
+}
+
+.benefit-copy-viva strong {
+  color: #302923;
+}
+
+.benefit-copy-viva small {
+  color: #70665e;
+}
+
+.project-seo-card-viva {
+  background:
+    linear-gradient(135deg, rgba(255, 253, 249, 0.92), rgba(247, 238, 228, 0.84));
+  border-color: rgba(229, 102, 28, 0.26);
+  box-shadow: 0 18px 34px rgba(92, 64, 42, 0.085);
+}
+
+.project-seo-icon-viva {
+  color: #e5661c;
+  border-color: rgba(229, 102, 28, 0.44);
+  background: rgba(229, 102, 28, 0.045);
+}
+
+.project-seo-main-viva h2 {
+  color: #2d2722;
+}
+
+.project-seo-main-viva > p:last-child {
+  color: #685e55;
+}
+
+.project-seo-kicker-viva {
+  color: #e5661c;
+}
+
+.project-seo-features-viva::before {
+  background: rgba(229, 102, 28, 0.23);
+}
+
+.project-seo-features-viva li {
+  color: #655b52;
+}
+
+.project-seo-features-viva li::before {
+  color: #e5661c;
+  border-color: rgba(229, 102, 28, 0.66);
+  background: rgba(255, 253, 249, 0.62);
+}
+
+.project-seo-card-viva + .viva-why {
+  margin-top: 42px;
+}
+
+@media (max-width: 900px) {
+  .portfolio-benefits-fitness .portfolio-benefit:nth-child(-n+2) {
+    border-bottom-color: rgba(255, 128, 0, 0.18);
+  }
+
+  .portfolio-benefits-viva .portfolio-benefit:nth-child(-n+2) {
+    border-bottom-color: rgba(229, 102, 28, 0.16);
+  }
+}
+
+@media (max-width: 700px) {
+  .fitness-intro h2,
+  .viva-intro h2 {
+    font-size: clamp(1.8rem, 7.5vw, 2.4rem);
+  }
+
+  .project-seo-card-fitness,
+  .project-seo-card-viva {
+    width: 92%;
+  }
+}
